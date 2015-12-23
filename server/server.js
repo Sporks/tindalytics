@@ -9,5 +9,9 @@ var server = http.createServer(function(request, response) {
     if (request.url.match(/.js$|.html$|.css$|.woff|.woff2|.tff$/)) {
       return response.end(fs.readFileSync(__dirname + "/client/assets/" + request.url));
     }
+
+  }
+  if (request.method === 'POST' && request.url === '/login.html'){
+
   }
 }).listen(3000)

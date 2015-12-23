@@ -1,0 +1,22 @@
+{
+  "name": "client",
+  "homepage": "https://github.com/RobbyRob81/tindalytics",
+  "authors": [
+    "Rob Rosario <rob@twixxies.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "skeleton": "~2.0.4"
+  }
+}

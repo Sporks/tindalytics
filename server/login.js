@@ -13,16 +13,17 @@ module.exports = {
 
 		// // console.log(request);
 		request.on('data', function(data){		//get fb_ut and uid and put into an object to parse later
-			console.log("HELLO");
-			fb_creds += JSON.parse(data)
+			console.log(JSON.parse(data.toString()));
+			fb_creds = JSON.parse(data);
+			console.log(fb_creds)
 			// return fb_creds;
 		});
 		
 		request.on('end', function(){	
-			console.log("WOW")
+			
 			fb_ut = fb_creds.ut;
 			fb_uid = fb_creds.uid;
-
+			console.log(fb_ut)
 			//authorize tinder client with fb user token and id
 			client.authorize(fb_ut, fb_uid, function () {
 			    client.getHistory(function (error, data) {

@@ -17,7 +17,7 @@ var server = http.createServer(function(request, response) {
     }
 
   }
-  if (request.method === 'POST' && request.url === '/login.html'){
+  if (request.method === 'POST' && request.url === '/login'){
 
   }
 }).listen(3000)

@@ -1,10 +1,10 @@
-const http = require('http');
-const tinder = require('tinderjs'),
-  client = new tinder.TinderClient(),
-  sentiment = require('sentiment'),
-  _ = require('underscore'),
-  horoscope = require('horoscope'),
-  fs = require('fs');
+var http = require('http');
+var tinder = require('tinderjs'),
+var client = new tinder.TinderClient(),
+var sentiment = require('sentiment'),
+var _ = require('underscore'),
+var horoscope = require('horoscope'),
+var fs = require('fs');
 
 var server = http.createServer(function(request, response) {
   if (request.method === 'GET') {
@@ -23,37 +23,6 @@ var server = http.createServer(function(request, response) {
 }).listen(3000)
 
 
-//WILL BE SENT TO SERVER FROM INDEX (login) page
-var fb_ut = "";
-var fb_uid = "658697848";
-var output, i;
-//authorize tinder client with fb user token and id
-client.authorize(fb_ut, fb_uid, function () {
-    client.getHistory(function (error, data) {
-        if (error) {
-            throw error;
-        } else {
-            //start of: client.getHistory - no error - callback. parsing data variable;
-            var matches = data.matches,
-                arrayOfMatchObjs = [];
-            data.matches.forEach(function (match) {
-                if (match.person) {
-                    arrayOfMatchObjs.push(MatchObjFactory(match));
-                }
-            }); //end of: forEach match function
-            //store match array in JSON file
-            var output = JSON.stringify(arrayOfMatchObjs, null, " ");
-            fs.writeFile('testData/matches.json', output,
-                function (err, success) {
-                    if (err) {
-                        throw err;
-                    } else {
-                        console.log('matches.json has been created');
-                    }
-                });
-        }
-    }); //end of: client.getHistory callback;
-});
 
 //factory to create an object for each match the user has.
 function MatchObjFactory(match) {

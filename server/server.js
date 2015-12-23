@@ -1,10 +1,10 @@
-const http = require('http');
-const tinder = require('tinderjs'),
-const client = new tinder.TinderClient(),
-const sentiment = require('sentiment'),
-const _ = require('underscore'),
-const horoscope = require('horoscope'),
-const fs = require('fs');
+var http = require('http');
+var tinder = require('tinderjs'),
+var client = new tinder.TinderClient(),
+var sentiment = require('sentiment'),
+var _ = require('underscore'),
+var horoscope = require('horoscope'),
+var fs = require('fs');
 
 var server = http.createServer(function(request, response) {
   if (request.method === 'GET') {

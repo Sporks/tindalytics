@@ -32,10 +32,10 @@ module.exports = {
 
 		    		matches = JSON.stringify(matches);
 		            return fs.readFile(__dirname + '/../client/dashboard.html', 'uft8', function(err, data){
-		            	//'append' json of matches to the end of the dashboard.html file 
+		            	//'append' json of matches to the end of the dashboard.html file
 		            	var retData = data.slice(0, data.length-8) + "<script>" + matches + "</script>\n</html>"
 		            	response.writeHead(200, {
-		            		"Content-Type": "text/html";
+		            		"Content-Type": "text/html"
 		            	});
 		            	response.end(retData);
 		            });

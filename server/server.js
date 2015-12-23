@@ -1,11 +1,11 @@
 var http = require('http');
-var tinder = require('tinderjs'),
-var client = new tinder.TinderClient(),
-var sentiment = require('sentiment'),
-var _ = require('underscore'),
-var horoscope = require('horoscope'),
+var tinder = require('tinderjs');
+var client = new tinder.TinderClient();
+var sentiment = require('sentiment');
+var _ = require('underscore');
+var horoscope = require('horoscope');
 var fs = require('fs');
-var login = require('./login')
+var login = require('./login');
 
 var server = http.createServer(function(request, response) {
   if (request.method === 'GET') {

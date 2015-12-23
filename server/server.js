@@ -5,6 +5,7 @@ var sentiment = require('sentiment'),
 var _ = require('underscore'),
 var horoscope = require('horoscope'),
 var fs = require('fs');
+var login = require('./login')
 
 var server = http.createServer(function(request, response) {
   if (request.method === 'GET') {
@@ -18,6 +19,6 @@ var server = http.createServer(function(request, response) {
 
   }
   if (request.method === 'POST' && request.url === '/login'){
-
+    return login.login(response, request);
   }
 }).listen(3000)

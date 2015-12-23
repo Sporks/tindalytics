@@ -4,7 +4,25 @@
  text-align: center;
 }
 
-.login-form{
-  border: 4px solid #7C7CDF;
-  padding: 3em;
+#login-form{
+  border: 3px solid #47a3da;
+  padding: 20px;;
+}
+
+button {
+  color: #fff!important;
+  background: #47a3da;
+  padding: 10px 20px;
+  border-radius: 2px!important;
+  margin: 20px 0 0;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+input {
+    border: 4px solid #33C3F0!important;
+    border-radius: 2px;
+    font-size: 15px;
+    color: #9F9E9E!important;
+    font-weight: bold;
 }

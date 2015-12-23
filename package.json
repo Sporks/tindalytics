@@ -1,0 +1,26 @@
+{
+  "name": "tindalytics",
+  "version": "1.0.0",
+  "description": "analytics platform for tinder users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcwelborn/tindalytics.git"
+  },
+  "keywords": [
+    "tinder",
+    "analytics"
+  ],
+  "author": "gcwelborn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gcwelborn/tindalytics/issues"
+  },
+  "homepage": "https://github.com/gcwelborn/tindalytics#readme",
+  "dependencies": {
+    "tinderjs": "^1.0.8"
+  }
+}

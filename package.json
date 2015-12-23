@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/gcwelborn/tindalytics#readme",
   "dependencies": {
-    "tinderjs": "^1.0.8"
+    "sentiment": "^1.0.3",
+    "tinderjs": "^1.0.8",
+    "underscore": "^1.8.3"
   }
 }

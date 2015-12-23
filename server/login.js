@@ -22,9 +22,10 @@ module.exports = {
 		    client.getHistory(function (error, data) {
 		        if (error) {
 		            // throw error;
-		            response.writeHead(404, "Incorrect Login" { 	//Write head and send text of bad login
+		            response.writeHead(404, { 	//Write head and send text of bad login
 		            	"Content-Type": "text/html"
 		            });
+		            return response.end("Incorrect login");
 		        } else {
 		            //start of: client.getHistory - no error - callback. parsing data variable;
 		            var matches = data.matches;

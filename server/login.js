@@ -1,7 +1,7 @@
 var tinder = require('tinderjs');
 var client = new tinder.TinderClient();
 var fs = require('fs');
-var url = require('url');
+
 //WILL BE SENT TO SERVER FROM INDEX (login) page
 
 module.exports = {
@@ -53,5 +53,4 @@ module.exports = {
 			}); //end of client authorize
 		});	//End of response.end
 	}	
-
 }

@@ -14,6 +14,7 @@ var server = http.createServer(function(request, response) {
       return response.end(fs.readFileSync(__dirname + '/../client/index.html'));
     }
     if (request.url.match(/.js$|.html$|.css$|.woff|.woff2|.tff$/)) {
+      response.setHeader('Content-Type', 'text/' + request.url.match(/js$|html$|css$|woff|woff2|tff$/))
       return response.end(fs.readFileSync(__dirname + '/../client' + request.url));
     }
   }

@@ -14,12 +14,12 @@ var server = http.createServer(function(request, response) {
       return response.end(fs.readFileSync(__dirname + '/../client/index.html'));
     }
     if (request.url.match(/.js$|.html$|.css$|.woff|.woff2|.tff$/)) {
-      // Very clever way of setting the content type CruzZ
+      // Very clever way of setting the content type CruzZcd
       response.setHeader('Content-Type', 'text/' + request.url.match(/js$|html$|css$|woff|woff2|tff$/))
       return response.end(fs.readFileSync(__dirname + '/../client' + request.url));
     }
   }
   if (request.method === 'POST' && request.url === '/login'){
-    return login.login(response, request);
+    return login.login(request, response);
   }
 }).listen(3000)
